@@ -1,7 +1,8 @@
 import { Plugin } from 'ckeditor5/src/core.js';
 import { ButtonView } from 'ckeditor5/src/ui.js';
 
-import ckeditor5Icon from '../theme/icons/ckeditor.svg';
+// import ckeditor5Icon from '../theme/icons/ckeditor.svg';
+import shrugIcon from '../theme/icons/shrug.svg';
 
 export default class Shrug extends Plugin {
 	static get pluginName() {
@@ -19,14 +20,14 @@ export default class Shrug extends Plugin {
 
 			view.set( {
 				label: t( 'Shrug' ),
-				icon: ckeditor5Icon,
+				icon: shrugIcon,
 				tooltip: true
 			} );
 
 			// Insert a text into the editor after clicking the button.
 			this.listenTo( view, 'execute', () => {
 				model.change( writer => {
-					const textNode = writer.createText( 'Hello CKEditor 5!' );
+					const textNode = writer.createText( '¯\\_(ツ)_/¯' );
 
 					model.insertContent( textNode );
 				} );
