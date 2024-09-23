@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    {
+      "name": "Shrug",
+      "className": "Shrug",
+      "description": "Adds text to the editor.",
+      "path": "src/shrug.js",
+      "uiComponents": [
+        {
+          "name": "shrugButton",
+          "type": "Button",
+          "iconPath": "theme/icons/ckeditor.svg"
+        }
+      ]
+    }
+  ]
+}
